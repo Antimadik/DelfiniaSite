@@ -2,9 +2,7 @@
 # Minecraft Server Site
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Flask](https://img.shields.io/badge/Flask-2.0+-blue.svg)
-
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ## О проекте
 
 **Minecraft Server Site** — это веб-приложение, разработанное для русскоязычного сообщества Minecraft. Сайт предоставляет платформу для подачи заявок на сервер, отправки жалоб, а также административного управления этими процессами. Проект реализован на языке Python с использованием фреймворка Flask и ориентирован на создание удобного и безопасного пространства для взаимодействия участников сообщества.
