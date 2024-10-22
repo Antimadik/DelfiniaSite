@@ -11,12 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         notification.innerText = message;
         notification.classList.add('show');
 
-        // Очистка предыдущего таймаута
         if (notificationTimeout) {
             clearTimeout(notificationTimeout);
         }
 
-        // Скрыть уведомление через 3 секунды
         notificationTimeout = setTimeout(() => {
             notification.classList.remove('show');
         }, 3000);
@@ -47,15 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const fullUrl = `${window.location.origin}${window.location.pathname}${ruleId}`;
                 navigator.clipboard.writeText(fullUrl).then(() => {
                     showNotification(`Ссылка скопирована: ${fullUrl}`);
-                    // Удаляем предыдущие выделения
                     document.querySelectorAll('.rule.highlighted').forEach(rule => {
                         rule.classList.remove('highlighted');
                     });
-                    // Выделяем текущий абзац
                     const targetRule = document.querySelector(ruleId);
                     if (targetRule) {
                         targetRule.classList.add('highlighted');
-                        // Прокручиваем к выделенному правилу
                         targetRule.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }
                 }).catch(err => {
@@ -141,32 +136,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (hash) {
             const targetRule = document.querySelector(hash);
             if (targetRule) {
-                // Прокручиваем к правилу
                 targetRule.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                // Удаляем предыдущие выделения
                 document.querySelectorAll('.rule.highlighted').forEach(rule => {
                     rule.classList.remove('highlighted');
                 });
-                // Выделяем текущий абзац
                 targetRule.classList.add('highlighted');
             }
         }
     }
 
-    // Вызов при загрузке страницы
     highlightRuleFromHash();
 
-    // Мобильное меню
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbar = document.querySelector('.navbar');
-
-    if (menuToggle && navbar) {
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
-    }
-
-    // Раскрытие подменю на мобильных устройствах
     const dropdowns = document.querySelectorAll('.nav-links li.dropdown');
 
     dropdowns.forEach(dropdown => {
