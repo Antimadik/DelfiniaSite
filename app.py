@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 import uuid
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Необходимо для использования сессий и flash сообщений
+app.secret_key = 'your_secret_key'  
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
@@ -199,13 +199,10 @@ def view_application(application_id):
     if request.method == 'POST':
         action = request.form.get('action')
         if action == 'accept':
-            # Логика для принятия заявки
             flash('Заявка принята.')
         elif action == 'reject':
-            # Логика для отклонения заявки
             flash('Заявка отклонена.')
 
-        # Можно удалить заявку после обработки
         os.remove(application_file)
         return redirect(url_for('admin_dashboard'))
 
