@@ -36,40 +36,13 @@
 
 ### Шаги по Установке
 
-1. **Клонирование Репозитория:**
+ **Запуск Приложения:**
 
    ```bash
-   git clone https://github.com/elmWilh/minecraft-server-site.git
-   cd minecraft-server-site
+   python run.py
    ```
 
-2. **Создание и Активация Виртуального Окружения:**
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # Для Linux и macOS
-   venv\Scripts\activate     # Для Windows
-   ```
-
-
-3. **Настройка Переменных Окружения:**
-
-Создайте файл .env в корневой директории проекта и добавьте следующие строки:
-
-```env
-FLASK_APP=app.py
-FLASK_ENV=development
-SECRET_KEY=your_secret_key
-```
-Важно: Замените `your_secret_key` на собственный секретный ключ для обеспечения безопасности сессий и сообщений.
-
-4. **Запуск Приложения:**
-
-   ```bash
-   flask run
-   ```
-
-Приложение будет доступно по адресу http://127.0.0.1:5000/.
+Приложение будет доступно по адресу http://localhost:5000/.
 
 5. **Генерация Токенов для Администраторов:**
 
