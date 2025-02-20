@@ -1,5 +1,33 @@
 /* Стили для страницы с правилами */
 
+/* Стили для заголовков */
+.sidebar h3 {
+    font-size: 22px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    color: #FF7F32; /* Оранжевый цвет (средний оттенок) */
+    text-transform: uppercase; /* Все буквы заглавные */
+    margin-bottom: 15px; /* Отступ снизу */
+    padding: 5px 0; /* Отступы сверху и снизу */
+    border-bottom: 2px solid #FF7F32; /* Оранжевая линия под заголовком */
+    letter-spacing: 1px; /* Расстояние между буквами */
+}
+
+/* Стили для кликабельных ссылок в заголовках */
+.sidebar h3 a {
+    color: #FF7F32; /* Оранжевый цвет */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.sidebar h3 a:hover {
+    color: #FFD700; /* Ярко-желтый цвет при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 /* Контейнер для правил и боковой панели */
 .rules-content {
     display: flex;
@@ -44,6 +72,7 @@
 }
 
 .rules-main h2 {
+    color: #FF7F32;
     text-align: center;
     margin-bottom: 30px;
 }

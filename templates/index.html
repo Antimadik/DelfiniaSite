@@ -10,10 +10,12 @@
 {% block content %}
 <div class="section">
     <h2>О проекте</h2>
-    <p>Fugance — ванильный сервер с продвинутой системой кланов, онлайн-картами, войнами кланов и продвинутой валютной системой. Всё это в ванильном выживании без вайпов и сложных механик.</p>
-    <p><strong class="copyable" data-copy="mc.fugances.xyz">IP сервера: mc.fugances.xyz</strong></p>
-    <button class="button" onclick="window.location.href='{{ url_for('apply') }}'">Подать заявку на сервер</button>
-    <p>В течение суток вы можете проверить по IP адресу <strong>mc.fugances.xyz</strong>, приняли ли вас на сервер. В случае вопросов или проблем обращайтесь в нашем Telegram-чате к администрации сервера.</p>
+    <p>Проект Delfinia призван собирать обычных любителей игры вместе. Мы представляем вам один из лучших ванильных серверов Minecraft Java, не требующих пожертвований, без приватов и читеров. Наша цель - обеспечить комфорт и уют в вашем виртуальном мире, а также поддерживать активность через Discord, где вы сможете следить за новостями сервера и игры.</p>
+    <p><strong class="copyable" data-copy="mc.fugances.xyz">IP сервера: delfinia.gomc.ru</strong></p>
+    <button class="button" onclick="window.location.href='https://discord.gg/2bm5apna3H'">
+        Подать заявку на сервер
+    </button>    
+    <p>Используя данную кнопку, вы можете подать заявку на наш сервер Delfinia в нашем Discord-сервере! Нажмите на кнопки ниже и следуйте инструкциям.</p>
 </div>
 
 <div class="section">
@@ -33,12 +35,13 @@
     <h2>Администрация</h2>
     <div class="staff-list">
         {% set staff_members = [
-            {'nickname': 'GuFugu', 'discord': '@gufugu', 'rank': 'Основатель'},
-            {'nickname': 'Fruzencyrol', 'discord': '@fruzencyrol', 'rank': 'Сооснователь'},
-            {'nickname': 'ShadowRazzy', 'discord': '@ch1saexec', 'rank': 'Ст. Админ'},
-            {'nickname': 'Updatedplay', 'discord': '@ucantbreakme', 'rank': 'Мл. Админ'},
-            {'nickname': 'Strainfangard', 'discord': '@strainfangard', 'rank': 'Мл. Админ'},
-            {'nickname': 'KoolzDragon', 'discord': '@koolz_drakon', 'rank': 'Ст. Модератор'},
+            {'nickname': 'NEYSANS4509', 'discord': '@neysans', 'rank': 'Основатель'},
+            {'nickname': 'Antimad', 'discord': '@amdegor', 'rank': 'Сооснователь'},
+            {'nickname': 'diodikYT', 'discord': '@icecube_icecube', 'rank': 'Тех. Админ'},
+            {'nickname': 'FesaGeAmviSss', 'discord': '@fesagee', 'rank': 'Тех. Админ'},
+            {'nickname': 'InvizerTasher', 'discord': '@.invizer', 'rank': 'Модератор'},
+            {'nickname': 've1n33333', 'discord': '@.ve1n', 'rank': 'Модератор'},
+            {'nickname': 'Nemii', 'discord': '@nemii1271', 'rank': 'Модератор'},
         ] %}
         {% for member in staff_members %}
         <div class="staff-member">
@@ -51,18 +54,13 @@
     </div>
 </div>
 
-<div class="section">
-    <h2>Скачать Лаунчер</h2>
-    <p>Установите наш лаунчер для удобного доступа к серверу.</p>
-    <a href="{{ launcher_link }}" class="button">Скачать лаунчер</a>
-</div>
+
 
 <div class="section">
     <h2>Наши сообщества</h2>
     <ul class="social-icons">
-        <li><a href="{{ discord_link }}" target="_blank"><img src="{{ url_for('static', filename='icons/discord.png') }}" alt="Discord"></a></li>
-        <li><a href="{{ telegram_link }}" target="_blank"><img src="{{ url_for('static', filename='icons/telegram.png') }}" alt="Telegram"></a></li>
-        <li><a href="{{ vk_link }}" target="_blank"><img src="{{ url_for('static', filename='icons/vk.png') }}" alt="ВКонтакте"></a></li>
+        <li><a href="https://discord.gg/2bm5apna3H" target="_blank"><img src="{{ url_for('static', filename='icons/discord.png') }}" alt="Discord"></a></li>
+        <li><a href="https://t.me/delfmc" target="_blank"><img src="{{ url_for('static', filename='icons/telegram.png') }}" alt="Telegram"></a></li>
     </ul>
 </div>
 {% endblock %}
